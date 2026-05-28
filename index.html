@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spootify - Web Player</title>
@@ -93,9 +92,10 @@
     }
 
     .logo-text {
+      font-family: 'SpotifyMixUITitle', -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 20px;
       font-weight: 700;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.2px;
     }
 
     .nav-item {
@@ -341,7 +341,7 @@
       display: flex;
       align-items: flex-end;
       gap: 24px;
-      background: linear-gradient(to bottom, rgba(64, 92, 76, 0.5), var(--bg-base) 90%);
+        background: linear-gradient(to bottom, rgb(38, 41, 41), var(--bg-base) 90%);
     }
 
     .playlist-cover {
@@ -383,6 +383,7 @@
     }
 
     .playlist-type {
+      font-family: 'SpotifyMixUITitle', -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
@@ -393,7 +394,7 @@
       font-size: 72px;
       font-weight: 900;
       line-height: 1;
-      letter-spacing: -2px;
+      letter-spacing: 0px;
       margin: 8px 0;
     }
 
@@ -429,7 +430,7 @@
       width: 24px;
       height: 24px;
       border-radius: 50%;
-      background: #333;
+      background: #1c1d1d;
     }
 
     .creator-name {
@@ -1377,8 +1378,84 @@
           </div>
         </div>
         <div class="library-content" id="libraryContent">
-          <!-- Populated by JS -->
+        <div class="library-item">
+          <div class="library-item-img">
+            <span class="material-icons-round" style="color: var(--text-subdued); font-size: 24px;">favorite</span>
+          </div>
+          <div class="library-item-info">
+            <div class="library-item-name">Eyad's Favorites</div>
+            <div class="library-item-meta">
+              <span>Playlist</span>
+              <span class="dot"></span><span>Eyad</span>
+            </div>
+          </div>
         </div>
+      
+        <div class="library-item">
+          <div class="library-item-img">
+            <span class="material-icons-round" style="color: var(--text-subdued); font-size: 24px;">music_note</span>
+          </div>
+          <div class="library-item-info">
+            <div class="library-item-name">E7TELAM Vibes</div>
+            <div class="library-item-meta">
+              <span>Playlist</span>
+              <span class="dot"></span><span>Obi</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="library-item">
+          <div class="library-item-img">
+            <span class="material-icons-round" style="color: var(--text-subdued); font-size: 24px;">album</span>
+          </div>
+          <div class="library-item-info">
+            <div class="library-item-name">Obi &amp; Ahmed Alaa Hits</div>
+            <div class="library-item-meta">
+              <span>Playlist</span>
+              <span class="dot"></span><span>Ahmed Alaa</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="library-item">
+          <div class="library-item-img">
+            <span class="material-icons-round" style="color: var(--text-subdued); font-size: 24px;">music_note</span>
+          </div>
+          <div class="library-item-info">
+            <div class="library-item-name">Late Night E7TELAM</div>
+            <div class="library-item-meta">
+              <span>Playlist</span>
+              <span class="dot"></span><span>Eyad</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="library-item">
+          <div class="library-item-img">
+            <span class="material-icons-round" style="color: var(--text-subdued); font-size: 24px;">music_note</span>
+          </div>
+          <div class="library-item-info">
+            <div class="library-item-name">Best of Obi</div>
+            <div class="library-item-meta">
+              <span>Playlist</span>
+              <span class="dot"></span><span>TrollMaster</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="library-item">
+          <div class="library-item-img">
+            <span class="material-icons-round" style="color: var(--text-subdued); font-size: 24px;">music_note</span>
+          </div>
+          <div class="library-item-info">
+            <div class="library-item-name">Ahmed Alaa Collection</div>
+            <div class="library-item-meta">
+              <span>Playlist</span>
+              <span class="dot"></span><span>NostalgiaNerd</span>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </aside>
 
@@ -1386,17 +1463,17 @@
     <main class="main-content">
       <header class="main-header">
         <div class="nav-buttons">
-          <button class="nav-btn" disabled>
+          <button class="nav-btn" disabled="">
             <span class="material-icons-round">chevron_left</span>
           </button>
-          <button class="nav-btn" disabled>
+          <button class="nav-btn" disabled="">
             <span class="material-icons-round">chevron_right</span>
           </button>
         </div>
         <div class="user-menu">
           <button class="user-btn">
             <div class="user-avatar">T</div>
-            <span class="user-name">Troll Master</span>
+            <span class="user-name">Troll</span>
             <span class="material-icons-round" style="color: var(--text-subdued); font-size: 20px; margin-right: 4px;">expand_more</span>
           </button>
         </div>
@@ -1404,21 +1481,21 @@
 
       <div class="playlist-header">
         <div class="playlist-cover">
-          <img id="playlistCoverImg" src="https://raw.githubusercontent.com/rxnsom/spootifyTroll/main/images/22.png" class="cover-img" alt="EYAD E7TELAM cover" style="width:100%;height:100%;object-fit:cover;">
+          <img id="playlistCoverImg" src="blob:null/1be4aa94-dbd0-419a-8974-a8e5d7b068f2" class="cover-img" alt="EYAD E7TELAM cover" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="playlist-info">
           <span class="playlist-type">Public Playlist</span>
-          <h1 class="playlist-title">OBI'S SUS</h1>
-          <p class="playlist-description">The greatest hits to annoy your friends. Perfect for parties, road trips, and losing friends.</p>
+          <h1 class="playlist-title">OBI'S SEX</h1>
+          <p class="playlist-description">Obi's very questionable songs</p>
           <div class="playlist-meta">
             <div class="creator-badge">
               <div class="creator-avatar"></div>
               <span class="creator-name">Obi</span>
             </div>
             <span class="dot"></span>
-            <span>69 songs</span>
+            <span>1 songs</span>
             <span class="dot"></span>
-            <span>about 4 hr 20 min</span>
+            <span>about 1 min</span>
           </div>
         </div>
       </div>
@@ -1426,9 +1503,7 @@
       <div class="tracklist-container">
         <div class="tracklist-header">
           <div class="tracklist-actions">
-            <button class="play-btn" id="mainPlayBtn">
-              <span class="material-icons-round">play_arrow</span>
-            </button>
+            <button class="play-btn" id="mainPlayBtn"><span class="material-icons-round">pause</span></button>
             <button class="action-btn" id="shuffleBtn" data-tooltip="Enable shuffle">
               <span class="material-icons-round">shuffle</span>
             </button>
@@ -1449,7 +1524,35 @@
           </div>
         </div>
         <div id="tracklist">
-          <!-- Populated by JS -->
+          <div class="track-row playing" data-id="1" data-index="0">
+            <div class="track-number">
+              <span>1</span>
+              <span class="material-icons-round">play_arrow</span>
+              <div class="playing-indicator">
+                <div class="playing-bar"></div>
+                <div class="playing-bar"></div>
+                <div class="playing-bar"></div>
+              </div>
+            </div>
+            <div class="track-info">
+              <div class="track-thumb">
+                <img src="blob:null/1be4aa94-dbd0-419a-8974-a8e5d7b068f2" class="cover-img" alt="">
+              </div>
+              <div class="track-details">
+                <div class="track-name">EYAD E7TELAM</div>
+                <div class="track-artists"><a href="#">Obi</a>, <a href="#">Ahmed Alaa</a></div>
+              </div>
+            </div>
+            <div class="track-album">
+              <a href="#">EYAD E7TELAM</a>
+            </div>
+            <div class="track-duration">
+              <button class="track-like-btn liked" data-track-id="1">
+                <span class="material-icons-round" style="font-size: 16px;">favorite</span>
+              </button>
+              <span>3:30</span>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -1459,16 +1562,14 @@
   <footer class="now-playing-bar">
     <div class="now-playing-left">
       <div class="now-playing-img" id="npImg">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect fill='%23292929' width='40' height='40'/%3E%3C/svg%3E" alt="" id="npAlbumArt">
+        <img src="blob:null/1be4aa94-dbd0-419a-8974-a8e5d7b068f2" alt="" id="npAlbumArt" class="cover-img">
       </div>
       <div class="now-playing-info">
-        <div class="now-playing-name" id="npName">Select a track</div>
-        <div class="now-playing-artist" id="npArtist">-</div>
+        <div class="now-playing-name" id="npName">EYAD E7TELAM</div>
+        <div class="now-playing-artist" id="npArtist"><a href="#">Obi</a>, <a href="#">Ahmed Alaa</a></div>
       </div>
       <div class="np-btns">
-        <button class="np-btn" id="npLikeBtn">
-          <span class="material-icons-round" style="font-size: 16px;">favorite_border</span>
-        </button>
+        <button class="np-btn liked" id="npLikeBtn"><span class="material-icons-round" style="font-size: 16px;">favorite</span></button>
       </div>
     </div>
 
@@ -1481,7 +1582,7 @@
           <span class="material-icons-round">skip_previous</span>
         </button>
         <button class="main-play-btn" id="playerPlayBtn">
-          <span class="material-icons-round" id="playerPlayIcon">play_arrow</span>
+          <span class="material-icons-round" id="playerPlayIcon">pause</span>
         </button>
         <button class="control-btn" id="nextBtn" data-tooltip="Next">
           <span class="material-icons-round">skip_next</span>
@@ -1491,13 +1592,13 @@
         </button>
       </div>
       <div class="progress-container">
-        <span class="progress-time" id="currentTime">0:00</span>
+        <span class="progress-time" id="currentTime">0:39</span>
         <div class="progress-bar" id="progressBar">
-          <div class="progress-fill" id="progressFill" style="width: 0%;">
+          <div class="progress-fill" id="progressFill" style="width: 56.3417%;">
             <div class="progress-handle"></div>
           </div>
         </div>
-        <span class="progress-time end" id="totalTime">0:00</span>
+        <span class="progress-time end" id="totalTime">1:09</span>
       </div>
     </div>
 
@@ -1970,5 +2071,5 @@
     renderLibrary();
     startProgressSimulation();
   </script>
-</body>
-</html>
+
+</body></html>
